@@ -1,1 +1,1 @@
-# Programaci-n-Concurrente-y-Paralela
+# Programacion Concurrente y Paralela
