@@ -1,3 +1,4 @@
+//Programa para sumar las columnas o filas de una matriz mediante un menú de opciones... 
 import java.util.Scanner;
 
 public class Matrices {
