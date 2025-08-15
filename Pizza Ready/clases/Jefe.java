@@ -1,3 +1,4 @@
+package clases;
 public class Jefe {
     private String nombre;
 

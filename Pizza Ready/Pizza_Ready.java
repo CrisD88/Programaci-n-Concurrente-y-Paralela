@@ -1,4 +1,7 @@
 // Simulación de un sistema de pedidos en una pizzería "Pizza Ready" mediante clases...
+import clases.Jefe;
+import clases.Empleado;
+import clases.Cliente;
 
 public class Pizza_Ready {
     public static void main(String[] args) {

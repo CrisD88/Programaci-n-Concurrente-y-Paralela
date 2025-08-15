@@ -1,3 +1,7 @@
+package clases;
+
+import clases.Cliente;
+
 public class Empleado {
     private String nombre;
 
