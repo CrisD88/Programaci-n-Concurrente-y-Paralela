@@ -8,40 +8,34 @@ import Clases.HiloFigura;
 import Clases.Rectangulo;
 import Clases.Trapecio;
 import Clases.Figura;
+import Clases.HiloAbuelo;
+import Clases.hijo;
+import Clases.HiloNieto;
 
 public class Figuras_Geo {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        //Creación de figuras
+        // Crear figuras
         Figura triangulo = new Triangulo(5, 10);
         Figura cuadrado = new Cuadrado(4);
         Figura rectangulo = new Rectangulo(6, 3);
         Figura trapecio = new Trapecio(5, 3, 4, 6, 2);
 
-        //Creación de hilos para cada figura
-        Thread hilo1 = new Thread(new HiloFigura(triangulo));
-        Thread hilo2 = new Thread(new HiloFigura(cuadrado));
-        Thread hilo3 = new Thread(new HiloFigura(rectangulo));
-        Thread hilo4 = new Thread(new HiloFigura(trapecio));
+        // Arreglos de figuras
+        Figura[] hijo1 = {triangulo, trapecio};
+        Figura[] hijo2 = {cuadrado, rectangulo};
 
-        System.out.println("\n\tFIGURAS GEOMETRICAS\n");
 
-        //Iniciar los hilos
-        hilo1.start();
-        hilo2.start();  
-        hilo3.start();
-        hilo4.start();
+        // Crear abuelo
+        Thread abuelo = new Thread(new HiloAbuelo(hijo1, hijo2));
+        abuelo.start();
 
-        //Esperar a que los hilos terminen
         try {
-            hilo1.join();
-            hilo2.join();
-            hilo3.join();
-            hilo4.join();
+            abuelo.join();
         } catch (InterruptedException e) {
-            System.out.println("Error al esperar a los hilos: " + e.getMessage());
+            e.printStackTrace();
         }
+
+        System.out.println("\n\tFIN DEL PROGRAMA");
     }
-    
 }
