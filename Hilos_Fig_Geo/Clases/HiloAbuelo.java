@@ -19,21 +19,15 @@ public void run() {
     Thread t1 = new Thread(h1);
     Thread t2 = new Thread(h2);
 
-    // Ejecutar HIJO 1 primero
+    // Ejecutar los dos HIJOS para que sea concurrente 
     t1.start();
+    t2.start();                  
     try {
         t1.join();
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    }
-
-    // Luego HIJO 2
-    t2.start();
-    try {
         t2.join();
     } catch (InterruptedException e) {
         e.printStackTrace();
-    }
+    } 
 
     // Comparar áreas
     double areaMayor;
@@ -46,10 +40,10 @@ public void run() {
         nombreMayor = h2.getNombreMayor();
     }
 
-    System.out.println("[ABUELO] La figura con mayor área de todas es: " +
+    System.out.println("[ABUELO] La figura con mayor area de todas es: " +
             nombreMayor + " = " + areaMayor);
 
-    System.out.println("[ABUELO] Terminó");
+    System.out.println("[ABUELO] Termino");
 }
 
     

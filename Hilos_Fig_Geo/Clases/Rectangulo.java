@@ -20,7 +20,7 @@ public class Rectangulo extends Figura {
 
     @Override
     public String getNombre() {
-        return "Rectángulo";
+        return "Rectangulo";
     }
     
 }

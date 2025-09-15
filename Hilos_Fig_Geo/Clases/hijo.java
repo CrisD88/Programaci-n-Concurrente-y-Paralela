@@ -43,10 +43,10 @@ public class hijo implements Runnable {
             nombreMayor = nietos[1].getNombreFigura();
         }
 
-        System.out.println("[HIJO " + numeroHijo + "] Área mayor: " +
+        System.out.println("[HIJO " + numeroHijo + "] Area mayor: " +
                 nombreMayor + " = " + areaMayor);
 
-        System.out.println("[HIJO " + numeroHijo + "] Terminó");
+        System.out.println("[HIJO " + numeroHijo + "] Termino");
     }
 
     public double getAreaMayor() {

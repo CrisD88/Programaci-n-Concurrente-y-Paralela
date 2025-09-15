@@ -21,6 +21,6 @@ public class Triangulo extends Figura {
 
     @Override
     public String getNombre() {   
-        return "Triángulo";
+        return "Triangulo";
     }
 }

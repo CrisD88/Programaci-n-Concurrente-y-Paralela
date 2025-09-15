@@ -11,7 +11,7 @@ public class HiloNieto implements Runnable {
     @Override
     public void run() {
         area = figura.calcularArea();
-        System.out.println("   [NIETO] " + figura.getNombre() + " | Área: " + area);
+        System.out.println("   [NIETO] " + figura.getNombre() + " | Area: " + area);
     }
 
     public double getArea() {

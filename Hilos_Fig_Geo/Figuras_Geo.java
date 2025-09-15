@@ -1,16 +1,16 @@
 /*Programa en el cual un hilo padre asigna a sus 4 hijos una figura geométrica (triangulo, cuadrado, trapecio y rectángulo) 
 para que cada uno calcule su área y perímetro.*/
 
-import java.util.Scanner;
+//import java.util.Scanner;
 import Clases.Triangulo;
 import Clases.Cuadrado;
-import Clases.HiloFigura;
+//import Clases.HiloFigura;
 import Clases.Rectangulo;
 import Clases.Trapecio;
 import Clases.Figura;
 import Clases.HiloAbuelo;
-import Clases.hijo;
-import Clases.HiloNieto;
+//import Clases.hijo;
+//import Clases.HiloNieto;
 
 public class Figuras_Geo {
     public static void main(String[] args) {
