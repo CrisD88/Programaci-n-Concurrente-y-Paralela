@@ -1,23 +1,38 @@
 package clases;
 
-import clases.Cliente;
-
 public class Empleado {
     private String nombre;
+    private boolean ocupado = false; // indica si está atendiendo a alguien
 
     public Empleado(String nombre) {
         this.nombre = nombre;
     }
 
-    public void atenderCliente(Cliente cliente) {
-        System.out.println("El empleado " + nombre + " atiende a " + cliente.getNombre() + "\n");
-    }
+    // Método sincronizado: solo un cliente puede entrar a la vez
+    public synchronized void atenderCliente(Cliente cliente) {
+        while (ocupado) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        ocupado = true;
 
-    public void prepararPizza() {
-        System.out.println("El empleado " + nombre + " prepara una pizza.\n");
-    }
+        System.out.println("El empleado " + nombre + " atiende a " + cliente.getNombre());
 
-    public void entregarPizza(Cliente cliente) {
-        System.out.println("El empleado " + nombre + " entrega la pizza a nombre de " + cliente.getNombre() + "\n");
+        try {
+            System.out.println("El empleado " + nombre + " prepara la pizza de " + cliente.getNombre());
+            Thread.sleep(2000); // simulación preparación
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("El empleado " + nombre + " entregó la pizza a " + cliente.getNombre());
+
+        // Liberamos el empleado y notificamos a otro cliente esperando
+        ocupado = false;
+        notify();
     }
 }
+

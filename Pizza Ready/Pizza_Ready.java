@@ -1,42 +1,35 @@
-// Simulación de un sistema de pedidos en una pizzería "Pizza Ready" mediante clases...
-import clases.Jefe;
 import clases.Empleado;
 import clases.Cliente;
+import clases.Jefe;
 
 public class Pizza_Ready {
     public static void main(String[] args) {
         cleanSc();
-        System.out.println("¡Bienvenido a Pizza Ready!\n");
-        Jefe jefe = new Jefe("Cristopher");
         Empleado empleado1 = new Empleado("Mauricio");
         Empleado empleado2 = new Empleado("Diego");
-        
-        Cliente cliente1 = new Cliente("Erick");
-        Cliente cliente2 = new Cliente("Ángel");
-        Cliente cliente3 = new Cliente("Luis");
+        Empleado empleado3 = new Empleado("Ana");
+        Jefe jefe1 = new Jefe("Gael");
 
-        jefe.supervisar();
+        Cliente cliente1 = new Cliente("Erick", empleado1, jefe1);
+        Cliente cliente2 = new Cliente("Angel", empleado2, jefe1);
+        Cliente cliente3 = new Cliente("Luis", empleado3, jefe1);
 
-        System.out.println("--- Proceso de Pedido de Pizza ---\n");
-        System.out.println("--- Cliente 1 ---");
-        cliente1.pedirPizza();
-        empleado1.atenderCliente(cliente1);
-        empleado1.prepararPizza();
-        empleado1.entregarPizza(cliente1);
-        cliente1.recibirPizza();
+        cliente1.start();
+        cliente2.start();
+        cliente3.start();
 
-        System.out.println("\n--- Cliente 2 ---");
-        cliente2.pedirPizza();
-        empleado2.atenderCliente(cliente2);
-        empleado2.prepararPizza();
-        empleado2.entregarPizza(cliente2);
-        cliente2.recibirPizza();
+        try {
+            cliente1.join();
+            cliente2.join();
+            cliente3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-        System.out.println("\n--- Cliente 3 ---");
-        cliente3.esperarOrden();
+        System.out.println(">>> Todos los pedidos fueron entregados. Fin de la simulación <<<");
     }
 
-    public static void cleanSc() { //Función para limpiar la consola
+        public static void cleanSc() { //Función para limpiar la consola
         try {
             if (System.getProperty("os.name").contains("Windows")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -48,3 +41,4 @@ public class Pizza_Ready {
         }
     }
 }
+
