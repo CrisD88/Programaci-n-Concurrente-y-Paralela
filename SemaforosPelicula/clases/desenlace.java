@@ -1,0 +1,18 @@
+package clases;
+
+public class desenlace implements Runnable {
+    private control control;
+
+    public desenlace(control control) {
+        this.control = control;
+    }
+
+    @Override
+    public void run() {
+        control.esperarPresidente(); // desenlace solo cuando todo está resuelto
+        System.out.println("\n--- DESENLACE ---");
+        System.out.println("Terroristas capturados.");
+        System.out.println("Héroe ovacionado.");
+        System.out.println("Casa Blanca recupera la calma.");
+    }
+}
