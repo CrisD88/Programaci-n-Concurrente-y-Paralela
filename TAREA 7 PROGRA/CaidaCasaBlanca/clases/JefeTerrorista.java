@@ -1,9 +1,9 @@
 package clases;
 
 public class JefeTerrorista extends Thread {
-    private control control;
+    private Control control;
 
-    public JefeTerrorista(control control) {
+    public JefeTerrorista(Control control) {
         this.control = control;
     }
 

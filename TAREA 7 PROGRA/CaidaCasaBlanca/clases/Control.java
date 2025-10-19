@@ -1,6 +1,6 @@
 package clases;
 
-public class control {
+public class Control {
     private boolean ataqueListo = false;
     private boolean heroeEntrando = false;
     private boolean bombaDesactivada = false;

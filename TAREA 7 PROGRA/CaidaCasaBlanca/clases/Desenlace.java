@@ -1,9 +1,9 @@
 package clases;
 
-public class desenlace implements Runnable {
-    private control control;
+public class Desenlace implements Runnable {
+    private Control control;
 
-    public desenlace(control control) {
+    public Desenlace(Control control) {
         this.control = control;
     }
 

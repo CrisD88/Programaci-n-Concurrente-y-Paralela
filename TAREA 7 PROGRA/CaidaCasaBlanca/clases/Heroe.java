@@ -1,9 +1,9 @@
 package clases;
 
-public class heroe implements Runnable {
-    private control control;
+public class Heroe implements Runnable {
+    private Control control;
 
-    public heroe(control control) {
+    public Heroe(Control control) {
         this.control = control;
     }
 

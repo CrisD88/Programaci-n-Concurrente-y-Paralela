@@ -1,9 +1,9 @@
 package clases;
 
-public class equipoRescate implements Runnable {
-    private control control;
+public class EquipoRescate implements Runnable {
+    private Control control;
 
-    public equipoRescate(control control) {
+    public EquipoRescate(Control control) {
         this.control = control;
     }
 

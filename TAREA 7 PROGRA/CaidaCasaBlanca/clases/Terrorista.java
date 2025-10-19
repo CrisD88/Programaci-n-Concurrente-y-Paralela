@@ -1,10 +1,11 @@
 package clases;
 
-public class terrorista extends Thread {
+public class Terrorista extends Thread {
+    private Control control;
     private String nombre;
-    private control control;
+    
 
-    public terrorista(String nombre, control control) {
+    public Terrorista(String nombre, Control control) {
         this.nombre = nombre;
         this.control = control;
     }

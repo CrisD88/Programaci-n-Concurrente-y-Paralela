@@ -1,9 +1,9 @@
 package clases;
 
-public class presidente implements Runnable {
-    private control control;
+public class Presidente implements Runnable {
+    private Control control;
 
-    public presidente(control control) {
+    public Presidente(Control control) {
         this.control = control;
     }
 
