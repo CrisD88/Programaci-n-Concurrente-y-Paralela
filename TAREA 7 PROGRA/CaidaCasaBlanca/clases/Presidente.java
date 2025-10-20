@@ -11,6 +11,6 @@ public class Presidente implements Runnable {
     public void run() {
         System.out.println("Presidente: detenido, esperando ayuda...");
         control.esperarPresidente();
-        System.out.println("Presidente: ¡Gracias héroe!");
+        System.out.println("Presidente: Gracias heroe!");
     }
 }

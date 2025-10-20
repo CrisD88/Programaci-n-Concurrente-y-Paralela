@@ -19,7 +19,7 @@ public class Control {
 
     public synchronized void iniciarAtaque() {
         ataqueListo = true;
-        System.out.println("Jefe Terrorista: ¡Ataquen ahora!");
+        System.out.println("Jefe Terrorista: Ataquen ahora!");
         notifyAll();
     }
 
@@ -36,7 +36,7 @@ public class Control {
 
     public synchronized void dejarEntrarHeroe() {
         heroeEntrando = true;
-        System.out.println("El héroe puede entrar en acción.");
+        System.out.println("El heroe puede entrar en accion.");
         notifyAll();
     }
 
@@ -53,7 +53,7 @@ public class Control {
 
     public synchronized void desactivarBomba() {
         bombaDesactivada = true;
-        System.out.println("Héroe: ¡bomba desactivada!");
+        System.out.println("Heroe: bomba desactivada!");
         notifyAll();
     }
 
@@ -70,7 +70,7 @@ public class Control {
 
     public synchronized void rescatarPresidente() {
         presidenteRescatado = true;
-        System.out.println("Héroe: ¡presidente rescatado!");
+        System.out.println("Heroe: presidente rescatado!");
         notifyAll();
     }
 }

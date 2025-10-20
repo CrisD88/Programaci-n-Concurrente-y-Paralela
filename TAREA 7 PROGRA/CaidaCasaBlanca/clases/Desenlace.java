@@ -12,7 +12,7 @@ public class Desenlace implements Runnable {
         control.esperarPresidente(); // desenlace solo cuando todo está resuelto
         System.out.println("\n--- DESENLACE ---");
         System.out.println("Terroristas capturados.");
-        System.out.println("Héroe ovacionado.");
+        System.out.println("Heroe ovacionado.");
         System.out.println("Casa Blanca recupera la calma.");
     }
 }

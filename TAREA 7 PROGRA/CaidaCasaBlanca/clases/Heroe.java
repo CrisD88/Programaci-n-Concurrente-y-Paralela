@@ -10,7 +10,7 @@ public class Heroe implements Runnable {
     @Override
     public void run() {
         control.dejarEntrarHeroe();  // espera a que el jefe lo habilite
-        System.out.println("Héroe entra en acción...");
+        System.out.println("Heroe entra en accion...");
         try { Thread.sleep(1500); } catch (InterruptedException e) {}
 
         control.desactivarBomba();

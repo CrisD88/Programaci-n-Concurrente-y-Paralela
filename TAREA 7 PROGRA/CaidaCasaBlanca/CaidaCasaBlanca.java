@@ -1,4 +1,12 @@
-package clases;
+
+
+import clases.Control;
+import clases.Desenlace;
+import clases.EquipoRescate;
+import clases.Heroe;
+import clases.JefeTerrorista;
+import clases.Presidente;
+import clases.Terrorista;
 
 public class CaidaCasaBlanca {
     public static void main(String[] args) {
