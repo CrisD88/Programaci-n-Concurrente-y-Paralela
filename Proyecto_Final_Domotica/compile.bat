@@ -1,0 +1,1 @@
+javac gui/*.java servidor/*.java control/*.java sensores/*.java actuadores/*.java
